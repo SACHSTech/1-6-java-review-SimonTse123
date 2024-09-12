@@ -6,27 +6,29 @@ import java.io.InputStreamReader;
 
 public class Review1 {
     public static void main(String[] args) throws IOException{
+
+        // Decalring variables
         int total = 0;
+        int month;
+        int day;
+        int[] daysInMonths = { 0 , 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
+        // Adding keyboard input
         BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
-        BufferedReader keyboard2 = new BufferedReader(new InputStreamReader(System.in));
-
+        
+        // Recieving user input for variables
         System.out.print("Enter the month number: ");
-        int month = Integer.parseInt(keyboard.readLine());
+        month = Integer.parseInt(keyboard.readLine());
 
         System.out.print("Enter the day number: ");
-        int day = Integer.parseInt(keyboard2.readLine());
-        for(int i = month - 1; i > 0;i--){
-            if(month == 1 || month == 3|| month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
-                total = total + 31;
-            }
-            else if (month == 2) {
-                total = total +28;
-            }
-            else if (month == 4 || month == 6 || month == 9 || month == 11) {
-                total = total + 30;
-            }
+        day = Integer.parseInt(keyboard.readLine());
+        
+        // Caculating the total number of days in each of the months
+        for(int i = 0; i < month;i++){
+           total += daysInMonths[i];
         }
+
+        // Adding in the remaining days and outputing result
        System.out.println(total + day);
     }
 }
