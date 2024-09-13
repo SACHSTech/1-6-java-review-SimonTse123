@@ -7,14 +7,14 @@ public class Review3 {
 
         // Listing all odd numbers from 20 - 100
         for(int i = 21; i < 100;i+=2) {
-            System.out.print(i +", ");
+            System.out.println(i);
         }
         // Line break
-        System.out.println("" +"\n");
+        System.out.println();
 
         // Lising all numbers 29 - 2
         for(int i = 29; i >=2;i--) {
-            System.out.print(i +", ");
+            System.out.println(i);
         }
     }
 }

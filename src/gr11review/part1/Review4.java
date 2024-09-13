@@ -3,6 +3,7 @@ package gr11review.part1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 
 public class Review4 {
     public static void main(String[] args) throws IOException{
@@ -11,6 +12,7 @@ public class Review4 {
     double price = 0;
     double tax = 0;
     double finalCost =0;
+    DecimalFormat df = new DecimalFormat("#,##0.00");
 
     BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
     System.out.print("How many items do you want to buy? ");
@@ -19,11 +21,11 @@ public class Review4 {
         System.out.print("Enter the price for item " + i + ": ");
         price += Double.parseDouble(keyboard.readLine()); 
     }
-    tax = Math.round(price * 0.13 * 100.0) / 100.0;
-    finalCost = Math.round(price * 1.13 * 100.0) / 100.0;
-    System.out.println("Subtotal: " + price);
-    System.out.println("Tax: $" + tax);
-    System.out.println("Total: $" + finalCost);
+    tax = price * 0.13;
+    finalCost =price * 1.13;
+    System.out.println("Subtotal: $" + df.format(price));
+    System.out.println("Tax: $" + df.format(tax));
+    System.out.println("Total: $" + df.format(finalCost));
     }
     
 }
