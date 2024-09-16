@@ -1,12 +1,22 @@
 package gr11review.part1;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.text.DecimalFormat;
 
+/** 
+ *  A program Review4 
+ *  @author Simon Tse
+ */
 public class Review4 {
+
+    /** 
+     *  Main method to execute the program logic
+     *  
+     *  @param args Comind-line arguements (not used).
+     *  @throws IOException If thre is an error during input.
+     */
     public static void main(String[] args) throws IOException{
+
     //Declare variables 
     int numItems = 0;
     double price = 0;
