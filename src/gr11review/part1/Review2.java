@@ -6,7 +6,9 @@ import java.io.*;
  *  The program Review class prints a list of 4 different options for jokes 
  *  and allows the user to pick one of them to print out a joke.
  *  
- * This program utilizes 
+ * This program utilizes the Switch-Case function to check the user input 
+ * and output the corresponding joke or message 
+ * 
  *  @author Simon Tse
  */
 public class Review2 {
