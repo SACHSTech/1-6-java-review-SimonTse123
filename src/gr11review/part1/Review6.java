@@ -4,15 +4,20 @@ import java.io.*;
 import java.text.DecimalFormat;
 
 /** 
- *  
+ *  The program Review6 is a cash register program where the user is able to keep entering item prices until they enter 0 
+ *  At the end of entering items, print out the total, the tax (13%) and the grand total. 
  * 
+ *  The program utilizes while-loops to allow users to continuously input the price of items
+ *  and stop whenever they want to. After a few calculations, the program outputs the total, the tax (13%) and the grand total. 
+ *  
+ *  @author Simon Tse
  */
 public class Review6 {
 
     /** 
      *  Main method to execute the program logic
      *  
-     *  @param args Comind-line arguements (not used).
+     *  @param args Command-line arguements (not used).
      *  @throws IOException If thre is an error during input.
      */
     public static void main(String[] args) throws IOException{ 
@@ -22,7 +27,7 @@ public class Review6 {
         double totalCost = 0;
         double tax = 0;
         double finalCost =0;
-        DecimalFormat df = new DecimalFormat("#,##0.00");
+        DecimalFormat currencyFormat = new DecimalFormat("#,##0.00");
 
         BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 
@@ -35,8 +40,8 @@ public class Review6 {
         tax = totalCost * 0.13;
         finalCost =totalCost * 1.13;
 
-        System.out.println("Subtotal: $" + df.format(totalCost));
-        System.out.println("Tax: $" + df.format(tax));
-        System.out.println("Total: $" + df.format(finalCost));
+        System.out.println("Subtotal: $" + currencyFormat.format(totalCost));
+        System.out.println("Tax: $" + currencyFormat.format(tax));
+        System.out.println("Total: $" + currencyFormat.format(finalCost));
     }
 }

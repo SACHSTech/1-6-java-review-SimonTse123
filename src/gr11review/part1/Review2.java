@@ -7,7 +7,7 @@ import java.io.*;
  *  and allows the user to pick one of them to print out a joke.
  *  
  * This program utilizes the Switch-Case function to check the user input 
- * and output the corresponding joke or message 
+ * and output the corresponding joke or message depending on their input
  * 
  *  @author Simon Tse
  */

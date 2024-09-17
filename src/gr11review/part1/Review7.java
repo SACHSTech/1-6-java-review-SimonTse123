@@ -2,6 +2,16 @@ package gr11review.part1;
 
 import java.io.*;
 
+/** 
+ *  This program Review7 will input a sentence from the user and give certain stats about it. This 
+ *  will include how many characters, spaces and letter a's the sentence has. In addition to this, 
+ *  the program will print dashes based on how many odd numbered characters
+ *  
+ *  The program utilizes a for-loop combined with Java's charAt function to keep a counter 
+ *  on how many characters, odd-numbered characters spaces and letter a's
+ * 
+ *  @author Simon Tse
+ */
 public class Review7 {
 
     /** 
@@ -13,7 +23,7 @@ public class Review7 {
     public static void main(String[] args) throws IOException{
 
         // Declaring variables
-        String sentence;
+        String theSentence;
         int numSpace = 0;
         int numA = 0;
         int numOdd =0;
@@ -21,14 +31,14 @@ public class Review7 {
 
         // Recieving user input
         System.out.print("");
-        sentence = keyboard.readLine();
+        theSentence = keyboard.readLine();
 
         // Determining number of spaces, a's and odd characters
-        for(int i = 0; i < sentence.length(); i ++) {
-            if(sentence.charAt(i) == ' '){
+        for(int i = 0; i < theSentence.length(); i ++) {
+            if(theSentence.charAt(i) == ' '){
                 numSpace++;
             }
-            if(sentence.charAt(i) == 'a') {
+            if(theSentence.charAt(i) == 'a') {
                 numA++;
             }
             if (i % 2 == 0) {
@@ -36,7 +46,7 @@ public class Review7 {
             }
         }
         // Outputing results
-        System.out.println("There are " + sentence.length() + " characters in the sentence.");
+        System.out.println("There are " + theSentence.length() + " characters in the sentence.");
         System.out.println("There are " + numSpace + " spaces in the sentence.");
         System.out.println("There are " + numA + " letter a in the sentence.");
         for(int i = 0; i < numOdd; i++) {

@@ -3,15 +3,20 @@ package gr11review.part1;
 import java.io.*;
 
 /** 
+ *  This program Review 5 class prompts for a yearly_amount, annual compound_interest_rate, 
+ *  and outputs the number of years.
  *  
- * 
+ *  This program utilizes a while loop to calculate the number of years it takes to 
+ *  reach the target amount by repeating the function when the accumulating amount is less than the target
+ *  
+ *  @author Simon Tse
  */
 public class Review5 {
 
     /** 
      *  Main method to execute the program logic
      *  
-     *  @param args Comind-line arguements (not used).
+     *  @param args Command-line arguements (not used).
      *  @throws IOException If thre is an error during input.
      */
     public static void main(String[] args) throws IOException{
@@ -19,7 +24,7 @@ public class Review5 {
         double yearAmount = 0;
         double interestRate = 0;
         double targetAmount = 0;
-        double accumulate = 0;
+        double accumulateAmount = 0;
         int years = 0;
 
         // Adding Keyboard Input
@@ -36,8 +41,8 @@ public class Review5 {
         targetAmount =Double.parseDouble(keyboard.readLine()); 
 
         // Determining how many years it takes to reach goal
-        while(accumulate < targetAmount){
-            accumulate = (accumulate + yearAmount) * ((interestRate/100) + 1);
+        while(accumulateAmount < targetAmount){
+            accumulateAmount = (accumulateAmount + yearAmount) * ((interestRate/100) + 1);
             years++;
         }
         

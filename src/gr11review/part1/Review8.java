@@ -3,6 +3,16 @@ package gr11review.part1;
 import java.io.*;
 import java.util.Random;
 
+/** 
+ *  The program Review8 simulates 1000 pulls of a slot machine, 
+ *  such that 3 random numbers (between 0 and 8) are generated for each pull. Then, it outputs 
+ *  the result of each pull and prints the number of times a triple (all 3 numbers equal) was pulled.
+ *  
+ *  The program utilizes Java's Random function to imitate a slot machine and uses a for-loop to 
+ *  keep track on how many triples are pulled.
+ * 
+ *  @author Simon Tse
+ */
 public class Review8 {
 
     /** 
@@ -30,6 +40,8 @@ public class Review8 {
                 intTriple++;
             }
         }
+
+        // Printing number of triples
         System.out.println(intTriple);
     }
 

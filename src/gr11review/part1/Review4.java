@@ -27,7 +27,7 @@ public class Review4 {
     double price = 0;
     double tax = 0;
     double finalCost =0;
-    DecimalFormat df = new DecimalFormat("#,##0.00");
+    DecimalFormat currencyFormat = new DecimalFormat("#,##0.00");
     
     // Recieving User Input for number of items
     BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
@@ -45,9 +45,9 @@ public class Review4 {
     finalCost =price * 1.13;
 
     // Outputing results to the reader
-    System.out.println("Subtotal: $" + df.format(price));
-    System.out.println("Tax: $" + df.format(tax));
-    System.out.println("Total: $" + df.format(finalCost));
+    System.out.println("Subtotal: $" + currencyFormat.format(price));
+    System.out.println("Tax: $" + currencyFormat.format(tax));
+    System.out.println("Total: $" + currencyFormat.format(finalCost));
     }
     
 }

@@ -22,7 +22,7 @@ public class Review1 {
     public static void main(String[] args) throws IOException{
 
         // Decalring variables
-        int total = 0;
+        int totalDays = 0;
         int month;
         int day;
         int[] daysInMonths = { 0 , 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
@@ -39,10 +39,10 @@ public class Review1 {
         
         // Caculating the total number of days in each of the months
         for(int i = 0; i < month;i++){
-           total += daysInMonths[i];
+           totalDays += daysInMonths[i];
         }
 
         // Adding in the remaining days and outputing result
-       System.out.println(total + day);
+       System.out.println(totalDays + day);
     }
 }
